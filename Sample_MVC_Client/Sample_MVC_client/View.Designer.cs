@@ -41,68 +41,61 @@
             // 
             // Connect_btn
             // 
-            this.Connect_btn.Location = new System.Drawing.Point(287, 45);
-            this.Connect_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Connect_btn.Location = new System.Drawing.Point(215, 37);
             this.Connect_btn.Name = "Connect_btn";
-            this.Connect_btn.Size = new System.Drawing.Size(103, 36);
+            this.Connect_btn.Size = new System.Drawing.Size(77, 29);
             this.Connect_btn.TabIndex = 0;
             this.Connect_btn.Text = "Connect";
             this.Connect_btn.UseVisualStyleBackColor = true;
             // 
             // Send_btn
             // 
-            this.Send_btn.Location = new System.Drawing.Point(58, 194);
-            this.Send_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Send_btn.Location = new System.Drawing.Point(44, 158);
             this.Send_btn.Name = "Send_btn";
-            this.Send_btn.Size = new System.Drawing.Size(120, 34);
+            this.Send_btn.Size = new System.Drawing.Size(90, 28);
             this.Send_btn.TabIndex = 1;
             this.Send_btn.Text = "Send";
             this.Send_btn.UseVisualStyleBackColor = true;
             // 
             // Send_Box
             // 
-            this.Send_Box.Location = new System.Drawing.Point(58, 139);
-            this.Send_Box.Margin = new System.Windows.Forms.Padding(4);
+            this.Send_Box.Location = new System.Drawing.Point(44, 113);
             this.Send_Box.Name = "Send_Box";
-            this.Send_Box.Size = new System.Drawing.Size(284, 22);
+            this.Send_Box.Size = new System.Drawing.Size(214, 20);
             this.Send_Box.TabIndex = 2;
             // 
             // Msg
             // 
             this.Msg.AutoSize = true;
-            this.Msg.Location = new System.Drawing.Point(54, 268);
-            this.Msg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Msg.Location = new System.Drawing.Point(40, 218);
             this.Msg.Name = "Msg";
-            this.Msg.Size = new System.Drawing.Size(70, 17);
+            this.Msg.Size = new System.Drawing.Size(54, 13);
             this.Msg.TabIndex = 4;
             this.Msg.Text = "Lable Box";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 119);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(40, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Text Box";
             // 
             // ServerIP
             // 
-            this.ServerIP.Location = new System.Drawing.Point(167, 52);
-            this.ServerIP.Margin = new System.Windows.Forms.Padding(4);
+            this.ServerIP.Location = new System.Drawing.Point(125, 42);
             this.ServerIP.Name = "ServerIP";
-            this.ServerIP.Size = new System.Drawing.Size(91, 22);
+            this.ServerIP.Size = new System.Drawing.Size(69, 20);
             this.ServerIP.TabIndex = 14;
             this.ServerIP.Text = "127.0.0.1";
             // 
             // ServerPort
             // 
             this.ServerPort.AcceptsReturn = true;
-            this.ServerPort.Location = new System.Drawing.Point(167, 18);
-            this.ServerPort.Margin = new System.Windows.Forms.Padding(4);
+            this.ServerPort.Location = new System.Drawing.Point(125, 15);
             this.ServerPort.Name = "ServerPort";
-            this.ServerPort.Size = new System.Drawing.Size(52, 22);
+            this.ServerPort.Size = new System.Drawing.Size(40, 20);
             this.ServerPort.TabIndex = 15;
             this.ServerPort.Text = "3000";
             // 
@@ -112,10 +105,9 @@
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label32.Location = new System.Drawing.Point(13, 55);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Location = new System.Drawing.Point(10, 45);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(146, 19);
+            this.label32.Size = new System.Drawing.Size(114, 16);
             this.label32.TabIndex = 12;
             this.label32.Text = "Server IP address:";
             // 
@@ -125,18 +117,17 @@
             this.PortLabel.BackColor = System.Drawing.Color.Transparent;
             this.PortLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PortLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PortLabel.Location = new System.Drawing.Point(13, 19);
-            this.PortLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PortLabel.Location = new System.Drawing.Point(10, 15);
             this.PortLabel.Name = "PortLabel";
-            this.PortLabel.Size = new System.Drawing.Size(128, 19);
+            this.PortLabel.Size = new System.Drawing.Size(103, 16);
             this.PortLabel.TabIndex = 13;
             this.PortLabel.Text = "Connect to Port:";
             // 
             // View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 432);
+            this.ClientSize = new System.Drawing.Size(302, 351);
             this.Controls.Add(this.ServerIP);
             this.Controls.Add(this.ServerPort);
             this.Controls.Add(this.label32);
@@ -146,7 +137,6 @@
             this.Controls.Add(this.Send_Box);
             this.Controls.Add(this.Send_btn);
             this.Controls.Add(this.Connect_btn);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "View";
             this.Text = "Form1";
             this.ResumeLayout(false);
