@@ -79,7 +79,7 @@ namespace Sample_MVC
 
         public void shutdown()
         {
-            TCPsocket.Close();
+            TCPsocket.Disconnect(false);
         }
     }
 }

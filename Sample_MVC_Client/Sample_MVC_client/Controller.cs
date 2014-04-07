@@ -14,6 +14,8 @@ namespace Sample_MVC
         private static View _view;
         private TCP_Model my_model;
 
+        string[] items = new string[4];
+
         string ServerIP = null;
         int ServerPort = 0;
 
@@ -28,6 +30,7 @@ namespace Sample_MVC
                 ServerIP = _view.GetServerIP();
                 ServerPort = _view.GetServerPort();
                 my_model = new TCP_Model(ServerIP, ServerPort);
+                _view.LoginVisable();
             }
             catch (Exception ex)
             {
@@ -35,11 +38,24 @@ namespace Sample_MVC
             }
         }
 
-        public void Send_btn_Click(object sender, EventArgs e)
+        //public void Send_btn_Click(object sender, EventArgs e)
+        //{
+        //    _view = (View)((Button)sender).FindForm();
+        //    my_model.Send_to_TCP_server(_view.GetMsg());
+        //    //_view.SetInfoBox(my_model.Get_From_TCP_server());
+        //}
+
+        public void SendLogin(string username, object sender)
         {
+            // Deterime which view to control
             _view = (View)((Button)sender).FindForm();
-            my_model.Send_to_TCP_server(_view.GetMsg());
-            _view.SetInfoBox(my_model.Get_From_TCP_server());
+
+            my_model.Send_to_TCP_server("OAP JOIN: ID=\"" + username + "\"");
+            items[0] = my_model.Get_From_TCP_server();
+            items[1] = my_model.Get_From_TCP_server();
+            items[2] = my_model.Get_From_TCP_server();
+            items[3] = my_model.Get_From_TCP_server();
+            _view.CreateItems(items);
         }
 
 
@@ -47,6 +63,14 @@ namespace Sample_MVC
         {
             if (my_model != null)
             my_model.shutdown();
+        }
+
+        public string Bid(int item, decimal bid, string username)
+        {
+            string message;
+            my_model.Send_to_TCP_server("OAP BID:Item=" + item + "User=" + username + "Bid=" + bid);
+            message = my_model.Get_From_TCP_server();
+            return message;
         }
     }
 }
